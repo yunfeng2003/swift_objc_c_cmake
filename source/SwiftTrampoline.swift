@@ -1,21 +1,24 @@
 
-
-@objc class MySwiftEntryClass
+import Foundation
+@objc class MySwiftEntryClass : NSObject
 {
-	class func enterMain(argc:Int, argv:UnsafeMutablePointer<UnsafeMutablePointer<CChar>>) -> Int32
+	@objc static func enterMain(argc:Int, argv:UnsafeMutablePointer<UnsafeMutablePointer<CChar>>) -> Int32
 	{
-		println("argc: \(argc)")
+		print("argc: \(argc)")
 		
 		var string_array : [String] = [String]()
-		for(var i=0; i<argc; i++)
+
+		var i = 0,count = argc
+		while i < count
 		{
-			var current_arg : String = String.fromCString(argv[i])!
-			println("arg[\(i)]: \(current_arg)");
+			let current_arg : String = String(cString: argv[i])
+			print("arg[\(i)]: \(current_arg)");
 			string_array.append(current_arg)
+			i += 1
 		}
 		
 		
-		return main(argc, string_array)
+		return main(argc: argc, argv: string_array)
 		
 	}
 }

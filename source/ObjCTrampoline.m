@@ -15,7 +15,7 @@ int ObjCTrampoline_EnterMain(int argc, char* argv[])
 		fprintf(stderr, "arg[%d]: %s\n", i, argv[i]);
 	}
 	
-	int retval = [MySwiftEntryClass enterMain:argc argv:argv];
+	int retval = [MySwiftEntryClass enterMainWithArgc:argc argv:argv];
 	
 	return retval;
 }

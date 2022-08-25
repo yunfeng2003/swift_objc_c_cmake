@@ -1,6 +1,6 @@
 
-# Need @rpath support introduced in 2.8.12
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.12)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.16)
+set(CMAKE_OSX_DEPLOYMENT_TARGET "10.9" CACHE STRING "Minimum OS X deployment version")
 PROJECT(SwiftCMake)
 enable_language(Swift)
 

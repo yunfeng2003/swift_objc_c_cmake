@@ -1,3 +1,9 @@
+forked from ewmailing/SwiftXcodeCMake
+
+Upgrade Swift 2 to Swift 3 or newer
+Fixed some error in Migration
+
+
 # SwiftCMake test example
 This is a very simple test example of a program that intermixes C, Objective-C, and Swift.
 This is meant to a minimal, yet comprehensive representation of what most projects will have to deal with.
